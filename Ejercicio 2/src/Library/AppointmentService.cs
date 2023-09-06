@@ -9,47 +9,47 @@ namespace Library
         {
             Boolean isValid = true;
 
-            if (!ValidateString(name, "Patient's name"))
+            if (!Validation.ValidateString(name, "Patient's name"))
             {
                 isValid = false;
             }
 
-            if (!ValidateString(id, "Patient's ID"))
+            if (!Validation.ValidateString(id, "Patient's ID"))
             {
                 isValid = false;
             }
 
-            if (!ValidateString(phoneNumber, "Patient's phone number"))
+            if (!Validation.ValidateString(phoneNumber, "Patient's phone number"))
             {
                 isValid = false;
             }
             
-            if (!ValidateInt(patientAge, "Patient's age"))
+            if (!Validation.ValidateInt(patientAge, "Patient's age"))
             {
                 isValid = false;
             }
 
-            if (!ValidateString(doctorName, "Doctor's name"))
+            if (!Validation.ValidateString(doctorName, "Doctor's name"))
             {
                 isValid = false;
             }
 
-            if (!ValidateString (doctorID, "Doctor's ID"))
+            if (!Validation.ValidateString (doctorID, "Doctor's ID"))
             {
                 isValid = false;
             }
 
-            if (!ValidateString (doctorSpeciality, "Doctor's speciality"))
+            if (!Validation.ValidateString (doctorSpeciality, "Doctor's speciality"))
             {
                 isValid = false;
             }
 
-            if (!ValidateString(appoinmentPlace, "Appointment place"))
+            if (!Validation.ValidateString(appoinmentPlace, "Appointment place"))
             {
                 isValid = false;
             }
 
-            if (!ValidateString(date.ToString(), "Date Time"))
+            if (!Validation.ValidateString(date.ToString(), "Date Time"))
             {
                 isValid = false;
             }
