@@ -9,7 +9,8 @@ public class Cita
     public DateTime appointmentTime {get;set;}
     public string appointmentPlace {get;set;}
     
-    public Cita (Patient PatientData, Doctor DoctorData, string AppointmentPlace, DateTime AppointmentTime)
+    public Cita (Patient PatientData, Doctor DoctorData, string AppointmentPlace, DateTime AppointmentTime) // Recibe el objeto Paciente y Doctor
+    // y las informaciones correspondientes a la cita. Teniendo así un objeto con todos los detalles de la cita.
     {
         this.patientData = PatientData;
         this.doctorData = DoctorData;

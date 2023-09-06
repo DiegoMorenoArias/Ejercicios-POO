@@ -4,11 +4,11 @@ namespace Library;
 
 public class Patient
 {
-    public string patientName { get;}
-    public string patientID { get;}
-    public string phoneNumber { get;}
-    public int patientAge { get;}
-    public Patient(string Name, string Id, string PhoneNumber, int PatientAge)
+    public string patientName { get;} // Nombre del paciente
+    public string patientID { get;} // Cédula del paciente
+    public string phoneNumber { get;} // Teléfono del paciente
+    public int patientAge { get;} // Edad del paciente
+    public Patient(string Name, string Id, string PhoneNumber, int PatientAge) // Recibe las informaciones correspondientes y crea el objeto paciente
     {
         this.patientName = Name;
         this.patientID = Id;

@@ -6,6 +6,8 @@ namespace Library
     public class AppointmentService
     {
         public static bool CreateAppointment(string name, string id, string phoneNumber, int patientAge, string doctorName, string doctorSpeciality, string doctorID, string appoinmentPlace,  DateTime date)
+        //Esta función recibe todas las informaciones necesarias, en caso de alguna no ser válidas entonces el booleano posteriormente definido será false
+        // y además se indicará qué es lo que falta. Además, por como está configurado el Program no se crearán los objetos.
         {
             Boolean isValid = true;
 
