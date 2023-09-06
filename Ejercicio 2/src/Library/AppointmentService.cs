@@ -5,48 +5,56 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        public static bool CreateAppointment(string name, string id, string phoneNumber, int patientAge, string doctorName, string doctorSpeciality, string doctorID, string appoinmentPlace,  DateTime date)
         {
-            StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
 
-            if (string.IsNullOrEmpty(name))
+            if (!ValidateString(name, "Patient's name"))
             {
-                stringBuilder.Append("Unable to schedule appointment, 'name' is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(id))
+            if (!ValidateString(id, "Patient's ID"))
             {
-                stringBuilder.Append("Unable to schedule appointment, 'id' is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(phoneNumber))
+            if (!ValidateString(phoneNumber, "Patient's phone number"))
             {
-                stringBuilder.Append("Unable to schedule appointment, 'phone number' is required\n");
+                isValid = false;
+            }
+            
+            if (!ValidateInt(patientAge, "Patient's age"))
+            {
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(appoinmentPlace))
+            if (!ValidateString(doctorName, "Doctor's name"))
             {
-                stringBuilder.Append("Unable to schedule appointment, 'appoinment place' is required\n");
                 isValid = false;
             }
 
-
-            if (string.IsNullOrEmpty(doctorName))
+            if (!ValidateString (doctorID, "Doctor's ID"))
             {
-                stringBuilder.Append("Unable to schedule appointment, 'doctor name' is required\n");
                 isValid = false;
             }
 
-            if (isValid)
+            if (!ValidateString (doctorSpeciality, "Doctor's speciality"))
             {
-                stringBuilder.Append("Appoinment scheduled");
+                isValid = false;
             }
 
-            return stringBuilder.ToString();
+            if (!ValidateString(appoinmentPlace, "Appointment place"))
+            {
+                isValid = false;
+            }
+
+            if (!ValidateString(date.ToString(), "Date Time"))
+            {
+                isValid = false;
+            }
+
+            return isValid;
         }
 
     }
