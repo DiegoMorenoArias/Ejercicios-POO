@@ -12,7 +12,11 @@ namespace Program
                 Patient Steven = new Patient("Steven Jhonson", "986782342", "1.212.121-2", 19);
                 Doctor Carlos = new Doctor("Carlos Dominica", "Gynecologist", "1.234.567-2");
                 Cita Cita1 = new Cita (Steven, Carlos, "Wall Street", DateTime.Now);
-                ImprimirCita(Cita1);
+                CitaPrinter.ImprimirCita(Cita1);
+            }
+            else
+            {
+                Console.WriteLine("\nAppointment could not be scheduled. Please correct the missing parts indicated above.")
             }
         }
     }
